@@ -2,15 +2,6 @@ import Styled from 'styled-components';
 
 const breakLarge = "min-width: 1200px"
 
-export const Main = Styled.main`
-  @media screen and (${breakLarge}){
-    display: grid;
-    grid-template-columns: repeat(3, 25vw);
-    grid-gap: 10% 3%;
-    justify-content: center;
-  }
-`;
-
 export const CardContainer = Styled.article`
   display: flex;
   flex-direction: column;

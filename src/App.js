@@ -1,7 +1,17 @@
+import { GlobalStyle } from './GlobalStyles';
+
+import Header from './patterns/Header/index';
+import SearchBar from './components/SearchBar/index';
+import Card from './patterns/Card';
 
 function App() {
   return (
-    <h1>Hello</h1>
+    <>
+      <GlobalStyle />
+      <Header />
+      <SearchBar />
+      <Card /> 
+    </>
   );
 }
 

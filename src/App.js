@@ -2,9 +2,7 @@ import { useState, useEffect } from 'react';
 
 import { GlobalStyle } from './GlobalStyles';
 
-import Header from './patterns/Header/index';
-import SearchBar from './components/SearchBar/index';
-import Catalog from './pages/catalog/index'
+import Routes from './routes';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -20,9 +18,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Header />
-      <SearchBar />
-      <Catalog data={products} />
+      <Routes data={products} />
     </>
   );
 }

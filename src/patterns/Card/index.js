@@ -1,3 +1,4 @@
+import { useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { CardContainer } from './styles';
@@ -5,6 +6,11 @@ import ActionButton from '../../components/ActionButton';
 
 
 export default function Card({ product }) {
+  const history = useHistory();
+  const addToCart = () => {
+    history.push(`/checkout/${product.id}`);
+  }
+
   return (
     <>
       <CardContainer>
@@ -40,12 +46,12 @@ export default function Card({ product }) {
 
         <span>$ {product.price}</span>
 
-        <ActionButton />
+        <ActionButton text="Add to cart" fn={addToCart} />
       </CardContainer>
     </>
   )
 }
 
-Card.prototype = {
+Card.propType = {
   product: PropTypes.object.isRequired,
 }

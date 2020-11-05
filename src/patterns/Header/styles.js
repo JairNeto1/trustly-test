@@ -7,7 +7,7 @@ export const Topbar = Styled.header`
   justify-content: space-between;
   background-color: var(--secondary-color);
   height: 4rem;
-  padding: .5rem;
+  padding: .5rem 6rem;
 
   a{
     display: flex;
@@ -21,6 +21,7 @@ export const Topbar = Styled.header`
   span{
     font-weight: bold;
     font-size: 1.1rem;
+    margin: 0 auto;
   }
 
   img{

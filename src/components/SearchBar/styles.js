@@ -33,6 +33,9 @@ export const Form = Styled.form`
 
     @media screen and (${breakLarge}){
       margin: 0 auto;
+      width: 50%;
+      text-align: center;
+      outline: none;
     }
   }
 `;

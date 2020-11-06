@@ -1,27 +1,27 @@
-import { useHistory } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import { useHistory } from "react-router-dom";
+import PropTypes from "prop-types";
 
-import { Container, Delivery, SubTitle, Review, Payment} from './styles';
+import { Container, Delivery, SubTitle, Review, Payment } from "./styles";
 
-import ProductDetails from '../../components/ProductDetails/index';
-import CartTotal from '../../components/CartTotal/index';
-import PaymentOptions from '../../patterns/PaymentOptions/index';
-import ActionButton from '../../components/ActionButton';
+import ProductDetails from "../../components/ProductDetails/index";
+import CartTotal from "../../components/CartTotal/index";
+import PaymentOptions from "../../patterns/PaymentOptions/index";
+import ActionButton from "../../components/ActionButton";
 
-import Bank from '../../assets/green-bank.png';
+import Bank from "../../assets/green-bank.png";
 
 export default function OrderSummary({ page, product }) {
   const history = useHistory();
   const handlePurchase = () => {
-    alert("Thank you for your purchase!")
+    alert("Thank you for your purchase!");
     setTimeout(() => {
-      history.push("/")
+      history.push("/");
     }, 5000);
-  }
-  
+  };
+
   return (
     <>
-      {page === "checkout" ? 
+      {page === "checkout" ? (
         <Container>
           <ProductDetails product={product} />
 
@@ -37,30 +37,28 @@ export default function OrderSummary({ page, product }) {
           <SubTitle>Select your payment method</SubTitle>
 
           <PaymentOptions product={product} />
-          
         </Container>
-        :
+      ) : (
         <Review>
           <ProductDetails product={product} />
 
           <Payment>
             <h6>Payment Method</h6>
             <div>
-              <img src={Bank} alt="Online Banking"/>
+              <img src={Bank} alt="Online Banking" />
               <span>Online Banking</span>
             </div>
           </Payment>
 
           <CartTotal product={product} />
           <ActionButton text="Place order" fn={handlePurchase} />
-
         </Review>
-      }
+      )}
     </>
-  )
+  );
 }
 
 OrderSummary.propTypes = {
   page: PropTypes.string,
   product: PropTypes.object.isRequired,
-}
+};

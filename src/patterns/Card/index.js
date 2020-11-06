@@ -1,15 +1,14 @@
-import { useHistory } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import { useHistory } from "react-router-dom";
+import PropTypes from "prop-types";
 
-import { CardContainer } from './styles';
-import ActionButton from '../../components/ActionButton';
-
+import { CardContainer } from "./styles";
+import ActionButton from "../../components/ActionButton";
 
 export default function Card({ product }) {
   const history = useHistory();
   const addToCart = () => {
     history.push(`/checkout/${product.id}`);
-  }
+  };
 
   return (
     <>
@@ -33,7 +32,7 @@ export default function Card({ product }) {
             <option value="43">43</option>
             <option value="44">44</option>
           </select>
-          
+
           <label htmlFor="quantity">Quantity</label>
           <select name="quantity" id="quantity">
             <option value="1">1</option>
@@ -49,9 +48,9 @@ export default function Card({ product }) {
         <ActionButton text="Add to cart" fn={addToCart} />
       </CardContainer>
     </>
-  )
+  );
 }
 
 Card.propType = {
   product: PropTypes.object.isRequired,
-}
+};

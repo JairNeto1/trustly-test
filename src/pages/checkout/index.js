@@ -1,28 +1,27 @@
-import { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
+import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 
-import { Main, Title, ProductImage } from './styles';
+import { Main, Title, ProductImage } from "./styles";
 
-import Header from '../../patterns/Header/index';
-import ProgressBar from '../../components/ProgressBar/index';
-import OrderSummary from '../../patterns/OrderSummary/index';
+import Header from "../../patterns/Header/index";
+import ProgressBar from "../../components/ProgressBar/index";
+import OrderSummary from "../../patterns/OrderSummary/index";
 
 export default function Checkout({ products }) {
   const [id, setId] = useState("");
   const [product, setProduct] = useState({});
 
-  
+  //GETS ID FROM PATHNAME AND RENDERS PRODUCT WITH MATCHING ID
   useEffect(() => {
     setId(window.location.pathname.slice(-11));
 
-    products.map(item => {
-      if(item.id === id){
-        setProduct(item)
+    products.map((item) => {
+      if (item.id === id) {
+        setProduct(item);
       }
       return true;
     });
-  }, [id, products])
-
+  }, [id, products]);
 
   return (
     <>
@@ -38,9 +37,9 @@ export default function Checkout({ products }) {
         <OrderSummary page="checkout" product={product} />
       </Main>
     </>
-  )
+  );
 }
 
 Checkout.propTypes = {
   products: PropTypes.array.isRequired,
-}
+};

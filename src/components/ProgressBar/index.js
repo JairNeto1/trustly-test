@@ -1,6 +1,5 @@
-import PropTypes from 'prop-types';
-import { Container, ActiveBullet, InactiveBullet } from './styles';
-
+import PropTypes from "prop-types";
+import { Container, ActiveBullet, InactiveBullet } from "./styles";
 
 export default function ProgressBar({ page }) {
   return (
@@ -13,20 +12,21 @@ export default function ProgressBar({ page }) {
         <div></div>
         Payment options
       </ActiveBullet>
-      {page === "checkout" ? 
+      {page === "checkout" ? (
         <InactiveBullet>
-          <div></div> 
+          <div></div>
           Receipt
-        </InactiveBullet> : 
+        </InactiveBullet>
+      ) : (
         <ActiveBullet>
-          <div></div> 
+          <div></div>
           Receipt
-        </ActiveBullet>}
-      
+        </ActiveBullet>
+      )}
     </Container>
-  )
+  );
 }
 
 ProgressBar.propTypes = {
   page: PropTypes.string.isRequired,
-}
+};

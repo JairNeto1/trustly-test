@@ -1,10 +1,8 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import { Section } from './styles';
-
+import { Section } from "./styles";
 
 export default function CartTotal({ product }) {
-  
   return (
     <Section>
       <div>
@@ -14,9 +12,9 @@ export default function CartTotal({ product }) {
 
       <span>$ {product.price}</span>
     </Section>
-  )
+  );
 }
 
 CartTotal.propTypes = {
   product: PropTypes.object.isRequired,
-}
+};

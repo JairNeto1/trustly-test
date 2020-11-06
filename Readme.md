@@ -17,7 +17,7 @@ then:
   yarn start
 ```
 
-or simply visit the link below:
+or simply visit the link:
   [Shoes.on](https://shoeson.herokuapp.com/)
 
 ### Meta

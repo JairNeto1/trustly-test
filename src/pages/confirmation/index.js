@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
 
-import { Main, ProductImage } from './styles';
+import { Main, Title, ProductImage } from './styles';
 
 import Header from '../../patterns/Header/index';
 import OrderSummary from '../../patterns/OrderSummary';
 import ProgressBar from '../../components/ProgressBar/index';
-
 
 export default function Confirmation() {
   const [product, setProduct] = useState({})
@@ -19,6 +18,7 @@ export default function Confirmation() {
     <>
       <Header title="Review and Confirmation" lastPage={`/checkout/${product.id}`} />
       <ProgressBar page="Confirmation" />
+      <Title>Review and Confirmation</Title>
 
       <Main>
         <ProductImage>

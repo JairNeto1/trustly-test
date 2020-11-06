@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
-import { Main, ProductImage } from './styles';
+import { Main, Title, ProductImage } from './styles';
 
 import Header from '../../patterns/Header/index';
 import ProgressBar from '../../components/ProgressBar/index';
@@ -28,6 +28,7 @@ export default function Checkout({ products }) {
     <>
       <Header title="Checkout" lastPage="/" />
       <ProgressBar page="checkout" />
+      <Title>Checkout</Title>
 
       <Main>
         <ProductImage>

@@ -1,5 +1,6 @@
 import Styled from 'styled-components';
 
+const breakSmall = "max-width: 600px";
 
 export const Form = Styled.form`
   display: flex;
@@ -64,5 +65,11 @@ export const Form = Styled.form`
     align-self: flex-end;
     width: 50%;
     margin-bottom: 1rem;
+    grid-area: 5/2/6/3;
+
+    @media screen and (${breakSmall}) {
+      width: 100%;
+      margin-top: 1rem;
+    }
   }
 `;

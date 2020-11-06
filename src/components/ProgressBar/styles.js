@@ -1,5 +1,6 @@
 import Styled from 'styled-components';
 
+const breakSmall = "max-width: 600px";
 
 export const Container = Styled.ul`
   display: flex;
@@ -10,6 +11,10 @@ export const Container = Styled.ul`
   background-color: var(--secondary-color);
   height: 2px;
   position: relative;
+
+  @media screen and (${breakSmall}) {
+    display: none;
+  }
 
   li{
     display: flex;
@@ -25,6 +30,10 @@ export const Container = Styled.ul`
   li:nth-child(2){
     top: -7px;
     left: 42%;
+
+    @media screen and (${breakSmall}) {
+      left: 32%;
+    }
   }
   li:last-child{
     top: -7px;

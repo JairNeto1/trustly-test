@@ -1,5 +1,6 @@
 import Styled from 'styled-components';
 
+const breakSmall = "max-width: 600px";
 
 export const Topbar = Styled.header`
   display: flex;
@@ -8,6 +9,12 @@ export const Topbar = Styled.header`
   background-color: var(--secondary-color);
   height: 4rem;
   padding: .5rem 6rem;
+
+  @media screen and (${breakSmall}) {
+    padding: .5rem 1.5rem;
+    background-color: #fff;
+    margin-bottom: .8rem;
+  }
 
   a{
     display: flex;
@@ -22,6 +29,10 @@ export const Topbar = Styled.header`
     font-weight: bold;
     font-size: 1.1rem;
     margin: 0 auto;
+
+    @media screen and (${breakSmall}) {
+      display: none;
+    }
   }
 
   img{

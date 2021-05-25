@@ -38,13 +38,13 @@ export default function PaymentOptions({ product }) {
         try {
           // eslint-disable-next-line no-undef
           PayWithMyBank.establish({
-            accessId: "D61EC9BAF0BB369B9438",
-            merchantId: "1004314986",
+            accessId: "XzHpRUr7RF75hg9nC5x2",
+            merchantId: "1012523953",
             metadata: { demo: "enabled" },
             currency: "USD",
             paymentType: "Deferred",
             amount: product.price,
-            description: "ackylafb@gmail.com",
+            description: "Shoes.on",
             merchantReference: "c267e818-1f1e-11eb-adc1-0242ac120002",
             returnUrl: "#success",
             cancelUrl: "#cancel",

@@ -1,25 +1,26 @@
 # Shoes.on
 
-__The best Sneakers in town__
+**The best Sneakers in town**
 
-That's an online shoe store that integrates with Trustly's PayWithMyBank mechanism. 
+That's an online shoe store that integrates with Trustly's PayWithMyBank mechanism.
 
 ![](/public/print.png)
 
 ### Installation
 
 Run it on your machine:
+
 ```
   yarn install
 ```
+
 then:
+
 ```
   yarn start
 ```
 
 or simply visit the link:
-  [Shoes.on](https://shoeson.herokuapp.com/)
+[Shoes.on](https://shoeson.herokuapp.com/)
 
 ### Meta
-
-Ackyla Ferreira - [LinkedIn](https://linkedin.com/in/ackyla-batista) - ackylafb@gmail.com

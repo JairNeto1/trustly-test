@@ -4,7 +4,7 @@
 
 That's an online shoe store that integrates with Trustly's PayWithMyBank mechanism.
 
-![](/public/print.png)
+![](src/assets/cover.png)
 
 ### Installation
 
